@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xf/screens/settings.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -9,6 +10,7 @@ class ProfileScreen extends StatelessWidget {
       ),
       body: Center(
         child: Text('Profile Screen'),
+          //SettingsScreen(),
       ),
     );
   }

@@ -5,6 +5,8 @@ import 'package:xf/widgets/most_requested_foods.dart';
 import 'package:xf/widgets/friends_section.dart';
 import 'package:xf/widgets/navbar_item.dart';
 import 'package:xf/widgets/add_button.dart';
+import 'package:xf/widgets/add_new_post.dart';
+import 'package:xf/screens/categories.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -55,8 +57,29 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             NavBarItem(icon: Icons.home, label: 'Home'),
-            NavBarItem(icon: Icons.category, label: 'Category'),
-            AddButton(),
+            NavBarItem(
+              icon: Icons.category,
+              label: 'Category',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CategoriesScreen()),
+                );
+              },
+            ),
+            NavBarItem(
+              icon: Icons.add,
+              label: 'Add',
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AddNewPost();
+                  },
+                );
+              },
+            ),
+
             NavBarItem(icon: Icons.message, label: 'Message'),
             NavBarItem(icon: Icons.person, label: 'Profile'),
           ],

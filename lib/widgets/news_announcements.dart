@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:xf/widgets/slide_item.dart'
 
 class NewsAnnouncementsSection extends StatelessWidget {
   @override
@@ -15,7 +16,8 @@ class NewsAnnouncementsSection extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 10),
+          //SlideItem(img: '/',),
+          //SizedBox(height: 10),
           // Ajoutez ici votre contenu pour les annonces
         ],
       ),
